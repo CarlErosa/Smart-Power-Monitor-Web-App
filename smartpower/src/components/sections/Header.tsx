@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <header>
+        <section>
     <nav className="flex flex-col sm:flex-row items-center justify-between py-2 px-4 bg-[#0f172a] text-white backdrop-blur font-bold border-b border-gray-700">
   <div className="flex items-center gap-x-2 mb-1 sm:mb-0">
     <img src="/image.png" alt="Logo" className="w-8 h-8 sm:w-12 sm:h-12" />
@@ -20,6 +20,6 @@ export default function Header() {
     </Button>
   </div>
 </nav>
-   </header>
+   </section>
     )
 }
