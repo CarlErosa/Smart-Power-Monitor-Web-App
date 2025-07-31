@@ -14,6 +14,7 @@ export default function Hero() {
         <Button variant="outline" className="bg-transparent border-white">
           <IconEye className="w-4 h-4" /> View Live Demo
         </Button> 
+       <h1 className="flex absolute mt-50 text-gray-400">No credit card required • 14-day free trial • Setup in under 5 minutes</h1>
       </div>
     </div>
    </section>
