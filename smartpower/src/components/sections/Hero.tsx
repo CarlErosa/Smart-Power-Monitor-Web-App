@@ -1,4 +1,4 @@
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { IconEye } from "@tabler/icons-react";
 
 
