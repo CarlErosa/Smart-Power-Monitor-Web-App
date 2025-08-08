@@ -1,0 +1,193 @@
+.lightningContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.lightning {
+  position: absolute;
+  width: 3px;
+  background: linear-gradient(to bottom, 
+    #ffffff 0%, 
+    #a5f3fc 20%, 
+    #0ea5e9 40%, 
+    #0284c7 60%, 
+    #0369a1 80%, 
+    transparent 100%
+  );
+  opacity: 0;
+  transform-origin: top center;
+  filter: drop-shadow(0 0 10px #a5f3fc) drop-shadow(0 0 20px #0ea5e9);
+}
+
+.lightning1 {
+  height: 200px;
+  top: 10%;
+  left: 15%;
+  animation: lightning1Anim 4s infinite;
+  animation-delay: 0s;
+}
+
+.lightning2 {
+  height: 150px;
+  top: 20%;
+  right: 20%;
+  animation: lightning2Anim 5s infinite;
+  animation-delay: 1.5s;
+}
+
+.lightning3 {
+  height: 180px;
+  top: 40%;
+  left: 25%;
+  animation: lightning3Anim 6s infinite;
+  animation-delay: 3s;
+}
+
+.lightning4 {
+  height: 120px;
+  top: 60%;
+  right: 30%;
+  animation: lightning4Anim 4.5s infinite;
+  animation-delay: 2s;
+}
+
+@keyframes lightning1Anim {
+  0%, 90%, 100% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  5% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  7% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  10% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  12% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+}
+
+@keyframes lightning2Anim {
+  0%, 85%, 100% {
+    opacity: 0;
+    transform: scaleY(0) rotate(15deg);
+  }
+  8% {
+    opacity: 1;
+    transform: scaleY(1) rotate(15deg);
+  }
+  10% {
+    opacity: 0;
+    transform: scaleY(1) rotate(15deg);
+  }
+  15% {
+    opacity: 1;
+    transform: scaleY(1) rotate(15deg);
+  }
+  18% {
+    opacity: 0;
+    transform: scaleY(0) rotate(15deg);
+  }
+}
+
+@keyframes lightning3Anim {
+  0%, 80%, 100% {
+    opacity: 0;
+    transform: scaleY(0) rotate(-10deg);
+  }
+  12% {
+    opacity: 1;
+    transform: scaleY(1) rotate(-10deg);
+  }
+  14% {
+    opacity: 0;
+    transform: scaleY(1) rotate(-10deg);
+  }
+  20% {
+    opacity: 1;
+    transform: scaleY(1) rotate(-10deg);
+  }
+  25% {
+    opacity: 0;
+    transform: scaleY(0) rotate(-10deg);
+  }
+}
+
+@keyframes lightning4Anim {
+  0%, 88%, 100% {
+    opacity: 0;
+    transform: scaleY(0) rotate(20deg);
+  }
+  6% {
+    opacity: 1;
+    transform: scaleY(1) rotate(20deg);
+  }
+  8% {
+    opacity: 0;
+    transform: scaleY(1) rotate(20deg);
+  }
+  11% {
+    opacity: 1;
+    transform: scaleY(1) rotate(20deg);
+  }
+  13% {
+    opacity: 0;
+    transform: scaleY(1) rotate(20deg);
+  }
+  16% {
+    opacity: 1;
+    transform: scaleY(1) rotate(20deg);
+  }
+  18% {
+    opacity: 0;
+    transform: scaleY(0) rotate(20deg);
+  }
+}
+
+.lightning::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ffffff 30%, #a5f3fc 70%, transparent 100%);
+  border-radius: 50%;
+  animation: spark 0.3s ease-in-out infinite alternate;
+}
+
+.lightning::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: -5px;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffffff 30%, #0ea5e9 70%, transparent 100%);
+  border-radius: 50%;
+  animation: spark 0.4s ease-in-out infinite alternate;
+  animation-delay: 0.2s;
+}
+
+@keyframes spark {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
